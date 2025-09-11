@@ -86,7 +86,8 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
-				'gradient-hover': 'var(--gradient-hover)'
+				'gradient-hover': 'var(--gradient-hover)',
+				'radial-golden-text': 'radial-gradient(circle at center, hsl(45, 100%, 80%) 0%, hsl(45, 90%, 30%) 80%)',
 			},
 			boxShadow: {
 				'card': 'var(--shadow-card)',
