@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
+.blue-bg-page{
+  background: #15141c;
+}
+
+.white-bg-page {
+  background-color: white;
+  min-height: 100vh;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.orange-color {
+  color: #ff771c;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotating {
+  0% {
+    --a: 0deg;
+  }
+
+  0% {
+    --a: 360deg;
+  }
+}
+
+.box {
+  width: 500px;
+  height: 200px;
+  background: repeating-conic-gradient(from var(--a),
+      #ff771c 0% 5%,
+      transparent 5% 40%,
+      #ff771c 50%);
+  filter: drop-shadow(0 15px 50px #000);
+  border-radius: 20px;
+  animation: rotating 4s linear infinite;
+  transition: 0.5s;
+}
+
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(from var(--a),
+      #ffffff 0%,
+      #ffffff 5%,
+      transparent 5%,
+      transparent 40%,
+      #fff 50%);
+  filter: drop-shadow(0 15px 50px #000);
+  border-radius: 20px;
+  animation: rotating 4s linear infinite;
+  animation-delay: -1s;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background: #2d2d39;
+  border-radius: 15px;
+  border: 8px solid #15141c;
+}
+
+.box:hover,
+.box.active {
+  width: 550px;
+  height: 650px;
+}
+
+.box:hover .login,
+.box.active .login {
+  inset: 40px;
+}
+
+.box:hover .loginBx,
+.box:hover .SignUpBx,
+.box.active .loginBx,
+.box.active .SignUpBx {
+  transform: translateY(0px);
+}
+
+.login {
+  inset: 60px;
+  border-radius: 10px;
+  background: #15151d;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: inset 0 10px 20px #00000090;
+  border-bottom: 2px solid #ffffff80;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.loginBx {
+  transform: translateY(116px);
+  transition: 0.5s;
+}
+.thankyouBx {
+  transform: translateY(145px);
+  transition: 0.5s;
+}
+.SignUpBx {
+  transform: translateY(258px);
+  transition: 0.5s;
+}
+
+
+h2 {
+  letter-spacing: 0.2em;
+}
+
+h2 i {
+  text-shadow: 0 0 5px #ff771c, 0 0 20px #ff771c;
+}
+
+input {
+  width: 100%;
+  padding: 8px 20px;
+  outline: none;
+  font-size: 1em;
+  color: #fff;
+  background: #00000a;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+.signBtn{
+  padding: 10px 0px;
+  outline: none;
+  font-size: 0.9em;
+  color: #fff;
+  background: #ff771c;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+.signBtn:hover,
+.signBtn.success-btn:hover{
+  transition: 0.5s ease;
+  background: #00000a;
+}
+.signBtn:active{
+  transition: 0s;
+  color: #ff771c;
+}
+.signBtn.success-btn{
+  background: green;
+}
+input[type="submit"] {
+  transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 10px #fff, 0 0 60px #ff771c;
+}
+
+.group :nth-child(1),
+.group :nth-child(2) {
+  transition: 0.5s;
+}
+
+.group :hover {
+  text-shadow: 0 0 10px #fff, 0 0 30px #ff771c;
+}
+
+@media screen and (max-width: 576px) {
+  .box {
+    width: 550px;
+    height: 650px;
+  }
+
+  .loginBx,
+  .SignUpBx {
+    transform: translateY(0px);
+  }
+
+  .login {
+    inset: 30px;
+  }
+}
+
+.phone-input-wrapper .iti {
+  width: 100%;
+}
+
+.iti__country-name {
+  display: none !important;
+}
+
+.iti__country-list {
+  max-height: 120px !important;
+  background: rgba(21, 20, 28, 0.8);
+  z-index: 2000;
+}
+
+.iti__country:hover {
+  background: rgba(255, 119, 28, 0.2);
+  cursor: pointer;
+}
+
+.iti__country-list::-webkit-scrollbar {
+  width: 4px; 
+}
+.iti__country-list::-webkit-scrollbar-thumb {
+  background: #ff771c;
+  width: 4px; 
+}

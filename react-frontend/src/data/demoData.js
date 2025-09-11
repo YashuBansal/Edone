@@ -1,0 +1,75 @@
+export const demoOrders = [
+  {
+    _id: "ORD123",
+    paymentId: "PAY001",
+    userId: { name: "John Doe" },
+    phone: "9176543210",
+    address: "221B Baker Street, London NW1 6XE, UK",
+    status: "Pending",
+    paymentStatus: "Pending",
+    method: "GPay",
+    createdAt: "2025-08-05T10:30:00Z",
+    items: [
+      { productId: { title: "T-Shirt" }, color: "Red", size: "M", price: 500, discount:30, gst: 18, quantity: 2 },
+      { productId: { title: "Jeans" }, color: "Blue", size: "32", price: 1000, discount:10, gst: 18, quantity: 1 },
+    ],
+    paymentDate: "2025-08-05T11:30:00Z",
+  },
+  {
+    _id: "ORD124",
+    paymentId: "PAY002",
+    userId: { name: "Jane Smith" },
+    phone: "9276543210",
+    address: "221B Baker Street, London NW1 6XE, UK",
+    status: "Delivered",
+    paymentStatus: "Success",
+    method: "Credit Card",
+    createdAt: "2025-08-04T14:20:00Z",
+    items: [
+      { productId: { title: "Dress" }, color: "Black", size: "L", price: 2200, discount:10, gst: 18, quantity: 1 },
+    ],
+    paymentDate: "2025-08-04T15:00:00Z",
+  },
+  {
+    _id: "ORD125",
+    paymentId: "PAY003",
+    userId: { name: "Jane Smith" },
+    phone: "9376543210",
+    address: "221B Baker Street, London NW1 6XE, UK",
+    status: "Cancelled",
+    paymentStatus: "Failed",
+    method: "COD",
+    createdAt: "2025-08-04T14:20:00Z",
+    items: [
+      { productId: { title: "Dress" }, color: "Black", size: "L", price: 2200, discount:10, gst: 18, quantity: 1 },
+    ],
+    paymentDate: "2025-08-04T15:00:00Z",
+  },
+];
+
+// export const demoPayments = [
+//   {
+//     _id: "PAY001",
+//     orderId: "ORD123",
+//     amount: 1600,
+//     method: "GPay",
+//     status: "Pending",
+//     date: "2025-08-05T11:30:00Z",
+//   },
+//   {
+//     _id: "PAY002",
+//     orderId: "ORD124",
+//     amount: 1980,
+//     method: "Credit Card",
+//     status: "Success",
+//     date: "2025-08-04T15:00:00Z",
+//   },
+//   {
+//     _id: "PAY003",
+//     orderId: "ORD125",
+//     amount: 1980,
+//     method: "COD",
+//     status: "Failed",
+//     date: "2025-08-04T15:00:00Z",
+//   },
+// ];
