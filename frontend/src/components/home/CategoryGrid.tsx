@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
-import { ArrowRight, Baby, Home, Book, User, Venus, Mars, Tag } from "lucide-react";
+import { ArrowRight, Baby, Home, Book, User, Venus, Mars, Handbag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -33,6 +33,15 @@ const categoryConfig: Record<
     color: "from-violet-500 to-purple-600",
   },
 };
+
+const gradients = [
+  "from-pink-500 to-purple-600",
+  "from-green-400 to-teal-500",
+  "from-yellow-400 to-orange-500",
+  "from-blue-500 to-indigo-600",
+  "from-red-500 to-pink-400",
+  "from-cyan-400 to-blue-500",
+];
 
 async function fetchCategories() {
   const API_URL = import.meta.env.VITE_API_URL;
@@ -90,11 +99,10 @@ export function CategoryGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category: any, index: number) => {
             const key = category.title.toLowerCase();
-            const config = categoryConfig[key] || {
-              icon: Tag,
-              color: "from-indigo-500 to-purple-600",
-            };
-            const Icon = config.icon || Tag;
+            const config = categoryConfig[key] || { icon: Handbag };
+            const Icon = config.icon || Handbag;
+
+            const gradient = gradients[index % gradients.length];
 
             return (
               <motion.div
@@ -111,7 +119,7 @@ export function CategoryGrid() {
                     <CardContent className="p-0">
                       <div className="relative overflow-hidden">
                         <div
-                          className={`h-32 bg-gradient-to-br ${config.color} relative`}
+                          className={`h-32 bg-gradient-to-br ${gradient} relative`}
                         >
                           <div className="absolute inset-0 bg-black/10" />
 
