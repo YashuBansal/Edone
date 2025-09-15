@@ -115,13 +115,13 @@ export function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="relative group">
-              <Button onClick={() => navigate("/")} variant="ghost" className="hover:bg-muted">
+              <Button onClick={() => navigate("/")} variant="ghost" className="hover:bg-primary">
                 Home
               </Button>
               </div>
             {/* Categories Dropdown */}
             <div className="relative group">
-              <Button variant="ghost" className="hover:bg-muted">
+              <Button variant="ghost" className="hover:bg-primary">
                 Categories
               </Button>
               <div className="absolute top-full left-0 mt-2 w-48 bg-popover border border-border rounded-2xl shadow-card-hover opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -151,7 +151,7 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="relative hover:bg-muted"
+                  className="relative hover:bg-primary"
                 >
                   <Heart className="h-5 w-5" />
                 </Button>
@@ -161,7 +161,7 @@ export function Navbar() {
             {/* Profile */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link to={isLoggedIn ? "/profile" : "/login"}>
-                <Button variant="ghost" size="icon" className="hover:bg-muted">
+                <Button variant="ghost" size="icon" className="hover:bg-primary">
                   <User className="h-5 w-5" />
                 </Button>
               </Link>
@@ -173,7 +173,7 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="relative hover:bg-muted"
+                  className="relative hover:bg-primary"
                 >
                   <ShoppingCart className="h-5 w-5" />
                   {isLoggedIn && cartCount > 0 && (

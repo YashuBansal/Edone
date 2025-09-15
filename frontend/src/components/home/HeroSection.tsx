@@ -27,12 +27,12 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-gradient-hero min-h-[95vh] flex items-center pb-5">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-primary-glow/10 to-accent/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-primary-glow/5 to-accent/10" />
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -77,7 +77,7 @@ export function HeroSection() {
               </span>{" "}
               <span className="text-white">Amazing Products</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto leading-relaxed">
               Shop the latest trends in electronics, fashion, and lifestyle
               products. Quality guaranteed, fast delivery, and unbeatable
               prices.
@@ -142,7 +142,7 @@ export function HeroSection() {
                   <h3 className="font-semibold text-foreground text-lg">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-foreground text-sm">
                     {feature.description}
                   </p>
                 </motion.div>
