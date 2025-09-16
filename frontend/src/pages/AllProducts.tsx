@@ -85,25 +85,30 @@ const ShopNow = () => {
 
   // ✅ Filtering
   const uniqueCategoryProducts = useMemo(() => {
-    const categoryMap = new Map();
-
     // Sort by createdAt (assuming you store creation date) or fallback to index
     const sortedProducts = [...allProducts].sort(
       (a, b) =>
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
-
+    const categoryMap = new Map();
     for (let product of sortedProducts) {
       const category = product.categoryId?.title || "Uncategorized";
-
       if (!categoryMap.has(category)) {
-        categoryMap.set(category, product);
+        categoryMap.set(category, [product]);
+      } else {
+        categoryMap.get(category).push(product);
       }
-
-      if (categoryMap.size >= 4) break; // only 4 categories
     }
-
-    return Array.from(categoryMap.values());
+    let result = [];
+    if (categoryMap.size >= 4) {
+      result = Array.from(categoryMap.values())
+        .map((arr) => arr[0])
+        .slice(0, 4);
+    } else {
+      const allProductsArray = Array.from(categoryMap.values()).flat();
+      result = allProductsArray.slice(0, 4);
+    }
+    return result;
   }, [allProducts]);
 
   return (
