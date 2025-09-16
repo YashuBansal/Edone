@@ -72,7 +72,7 @@ export function HeroSection() {
             className="space-y-4"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="bg-gradient-to-r from-primary via-primary-glow to-accent bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r text-shadow-card from-primary via-primary-glow to-accent bg-clip-text text-transparent">
                 Discover
               </span>{" "}
               <span className="text-white">Amazing Products</span>

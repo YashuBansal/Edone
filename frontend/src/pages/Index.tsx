@@ -3,7 +3,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { HeroSection } from '@/components/home/HeroSection';
 import { CategoryGrid } from '@/components/home/CategoryGrid';
-// import { FeaturedProducts } from '@/components/home/FeaturedProducts';
+import AllProducts from './AllProducts';
 
 const Index = () => {
   return (
@@ -11,8 +11,8 @@ const Index = () => {
       <Navbar />
       <main>
         <HeroSection />
+        <AllProducts />
         <CategoryGrid />
-        {/* <FeaturedProducts /> */}
       </main>
       <Footer />
     </div>
