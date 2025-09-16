@@ -119,7 +119,6 @@ const ShopNow = () => {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-8"
         >
-          {/* Header */}
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               New Products
@@ -128,8 +127,6 @@ const ShopNow = () => {
               Discover our New Collections of premium products
             </p>
           </div>
-          <Separator />
-          {/* Products Grid */}
           <motion.div
             layout
             className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"

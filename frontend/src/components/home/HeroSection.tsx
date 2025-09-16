@@ -134,7 +134,7 @@ export function HeroSection() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                   whileHover={{ scale: 1.05 }}
-                  className="flex flex-col items-center text-center space-y-3 p-6 rounded-3xl bg-background/10 backdrop-blur-sm border border-border/20 hover:bg-background/20 transition-all duration-300"
+                  className="hidden sm:flex flex-col items-center text-center space-y-3 p-6 rounded-3xl bg-background/10 backdrop-blur-sm border border-border/20 hover:bg-background/20 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center shadow-primary">
                     <feature.icon className="h-8 w-8 text-primary-foreground" />
